@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pullToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/weather_app2"
+        tools:context=".WeatherActivity">
+
+
+        <TextView
+            android:id="@+id/tw1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="City"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/city"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="171dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="146dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tw1" />
+
+        <TextView
+            android:id="@+id/tw2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="28dp"
+            android:text="Temperature"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/tempmax"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tempmax"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <TextView
+            android:id="@+id/tw3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="29dp"
+            android:text="Humidity"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="31dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/tempmin"
+            app:layout_constraintStart_toStartOf="@+id/tempmin" />
+
+        <TextView
+            android:id="@+id/tw4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Temp min"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@+id/tw3"
+            app:layout_constraintTop_toBottomOf="@+id/tw3" />
+
+        <TextView
+            android:id="@+id/tempmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="18dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/tempmax"
+            app:layout_constraintEnd_toEndOf="@+id/tempmax" />
+
+        <TextView
+            android:id="@+id/tw5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Temp max"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@+id/tw4"
+            app:layout_constraintTop_toBottomOf="@+id/tw4" />
+
+        <TextView
+            android:id="@+id/tempmax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="78dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tw5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tw5" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Pressure"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@+id/tw2"
+            app:layout_constraintTop_toBottomOf="@+id/tw2" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="default"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="@+id/temp"
+            app:layout_constraintTop_toBottomOf="@+id/temp" />
+
+        <ImageView
+            android:id="@+id/imageicon"
+            android:layout_width="94dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="299dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="163dp"
+            app:layout_constraintBottom_toTopOf="@+id/temp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
